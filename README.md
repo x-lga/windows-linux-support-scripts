@@ -9,7 +9,7 @@ PowerShell and Bash scripts for common L1/L2 support tasks across Windows and Li
 | Script | Common Ticket | Usage |
 |--------|--------------|-------|
 | `Flush-DNS.ps1` | "Website won't load" | `.\Flush-DNS.ps1` |
-| `Clear-PrintQueue.ps1` | "Can't print — stuck job" | `.\Clear-PrintQueue.ps1` |
+| `Clear-PrintQueue.ps1` | "Can't print - stuck job" | `.\Clear-PrintQueue.ps1` |
 | `Get-DiskSpace.ps1` | "Computer is slow / full" | `.\Get-DiskSpace.ps1` |
 | `Reset-NetworkStack.ps1` | "No network after all other steps" | `.\Reset-NetworkStack.ps1` |
 | `Get-SystemInfo.ps1` | "Gather info at start of session" | `.\Get-SystemInfo.ps1` |
