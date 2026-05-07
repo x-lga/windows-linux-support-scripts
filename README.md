@@ -66,3 +66,14 @@ configurable options, output designed for humans — all documented in
 `docs/script-design-principles.md`
 
 ---
+
+## Lab environment
+
+All scripts tested in:
+- Windows: Windows 10 22H2, Windows 11 23H2, Windows Server 2022
+  (via Proxmox home lab — domain contoso.local)
+- Linux: Ubuntu 22.04 LTS (Proxmox VM)
+- PowerShell version: 5.1 (Windows built-in)
+- Bash version: 5.1 (Ubuntu default)
+
+---
