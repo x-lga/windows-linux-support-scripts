@@ -119,7 +119,7 @@ support baseline. The backup script replaces manual file copying with a
 consistent, verified, automatically-maintained backup archive.
 
 More importantly, they demonstrate the mindset that every task that happens
-more than once a month should be automated, documented, and made repeatable —
+more than once a month should be automated, documented, and made repeatable -
 the foundation of any scalable IT operation.
 
 
