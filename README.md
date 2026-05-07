@@ -19,10 +19,10 @@ real technicians, with the safety and reliability that production use requires.
 | `Flush-DNS.ps1` | "Website won't load" / "Internal hostname not resolving" | Checks DNS Client service, counts cache entries before/after, tests resolution post-flush, provides next steps |
 | `Clear-PrintQueue.ps1` | "Job stuck in print queue / can't print" | Correct order: stop spooler → delete jobs → start spooler → verify; handles slow-to-stop service with timeout |
 | `Get-DiskSpace.ps1` | "Computer is slow" / "Disk is full" | All drives in one view, colour-coded by severity, cleanup guidance built in |
-| `Reset-NetworkStack.ps1` | Last resort — all other network steps failed | Documents IP config before reset, requires typed RESET confirmation, full winsock+TCP/IP+DNS+DHCP+ARP reset |
-| `Get-SystemInfo.ps1` | Baseline collection at start of any session | OS, CPU, RAM, disk, network, recent errors, top processes — all in one structured report with optional file output |
+| `Reset-NetworkStack.ps1` | Last resort - all other network steps failed | Documents IP config before reset, requires typed RESET confirmation, full winsock+TCP/IP+DNS+DHCP+ARP reset |
+| `Get-SystemInfo.ps1` | Baseline collection at start of any session | OS, CPU, RAM, disk, network, recent errors, top processes - all in one structured report with optional file output |
 | `Test-PortConnectivity.ps1` | "Can't connect to application/server/VPN" | Tests multiple hosts and ports simultaneously, service name lookup, open/closed result per port, next steps |
-| `Get-EventLogErrors.ps1` | "Something went wrong — I don't know what" | System, Application, Security logs in one view, truncated messages for quick scanning, Access Denied handling |
+| `Get-EventLogErrors.ps1` | "Something went wrong - I don't know what" | System, Application, Security logs in one view, truncated messages for quick scanning, Access Denied handling |
 | `Restart-ServiceWithCheck.ps1` | "Application is unresponsive" | Pre-check, dependent service warning, timeout handling, post-start health verification |
 
 
@@ -62,7 +62,7 @@ are all covered in both environments. This reflects real mixed-OS IT support.
 **Script design:**
 Single purpose, explicit confirmation for destructive actions, validate before
 acting, log what happened, show state before and after, safe defaults with
-configurable options, output designed for humans — all documented in
+configurable options, output designed for humans - all documented in
 `docs/script-design-principles.md`
 
 ---
@@ -71,7 +71,7 @@ configurable options, output designed for humans — all documented in
 
 All scripts tested in:
 - Windows: Windows 10 22H2, Windows 11 23H2, Windows Server 2022
-  (via Proxmox home lab — domain contoso.local)
+  (via Proxmox home lab - domain contoso.local)
 - Linux: Ubuntu 22.04 LTS (Proxmox VM)
 - PowerShell version: 5.1 (Windows built-in)
 - Bash version: 5.1 (Ubuntu default)
@@ -103,5 +103,24 @@ bash bash/system-health.sh
 # Linux — backup /etc before making changes
 sudo bash bash/backup-with-timestamp.sh /etc
 ```
+
+---
+
+## Impact
+
+These scripts reduce the time spent on repetitive L1/L2 tasks by replacing
+multi-step manual processes with single commands that handle every edge case,
+produce a logged audit trail, and tell the technician exactly what happened
+and what to do next.
+
+The print queue script replaces a 3-minute manual spooler restart sequence.
+The system info script replaces 8–10 separate commands needed to gather a
+support baseline. The backup script replaces manual file copying with a
+consistent, verified, automatically-maintained backup archive.
+
+More importantly, they demonstrate the mindset that every task that happens
+more than once a month should be automated, documented, and made repeatable —
+the foundation of any scalable IT operation.
+
 
 ---
