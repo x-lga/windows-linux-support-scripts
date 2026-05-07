@@ -77,3 +77,31 @@ All scripts tested in:
 - Bash version: 5.1 (Ubuntu default)
 
 ---
+
+## Quick start
+
+```powershell
+# Clone
+git clone https://github.com/YOUR-USERNAME/windows-linux-support-scripts.git
+cd windows-linux-support-scripts
+
+# Windows — run a script
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+.\powershell\Get-SystemInfo.ps1
+
+# Windows — test port connectivity
+.\powershell\Test-PortConnectivity.ps1 -Targets "google.com" -Ports 80,443
+```
+
+```bash
+# Linux — make scripts executable
+chmod +x bash/*.sh
+
+# Linux — system health report
+bash bash/system-health.sh
+
+# Linux — backup /etc before making changes
+sudo bash bash/backup-with-timestamp.sh /etc
+```
+
+---
