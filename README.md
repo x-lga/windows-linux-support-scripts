@@ -38,3 +38,31 @@ real technicians, with the safety and reliability that production use requires.
 | `service-monitor.sh` | Check and optionally restart Linux services | systemd-based, auto-restart mode, journal log on failure, exit code for cron alerting |
 
 ---
+
+## Skills demonstrated
+
+**PowerShell:**
+Parameter handling with validation attributes, try/catch error handling with
+human-readable messages, service management (start/stop with timeout and health
+verification), CIM/WMI queries for system information, formatted table output with
+colour coding, DNS operations, TCP port testing, event log queries, file operations,
+network stack management
+
+**Bash:**
+Argument parsing with getopts, input validation with regex and existence checks,
+logging functions, colour-coded terminal output, process management, disk analysis
+with du/df/find, tar/gzip compression, cron-compatible design, systemd interaction,
+secure password handling (no echo, immediate variable clearing), exit code design
+
+**Cross-platform thinking:**
+Every problem has both a Windows and a Linux solution represented. DNS flush,
+disk space check, user creation, service restart, log cleanup, and health reporting
+are all covered in both environments. This reflects real mixed-OS IT support.
+
+**Script design:**
+Single purpose, explicit confirmation for destructive actions, validate before
+acting, log what happened, show state before and after, safe defaults with
+configurable options, output designed for humans — all documented in
+`docs/script-design-principles.md`
+
+---
