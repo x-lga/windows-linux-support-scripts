@@ -10,4 +10,6 @@ deletes stuck jobs, restarts the spooler, and confirms the service came back up
 cleanly. It also handles the case where the spooler service cannot be stopped
 (rare but real) without crashing.
 
+**Cert alignment:** CompTIA A+
+
 #>
