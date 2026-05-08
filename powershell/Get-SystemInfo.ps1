@@ -8,4 +8,6 @@ everything in a single run and formats it as a readable report.
 PowerShell object properties, multiple system information sources, and output
 formatting - all in one script.
 
+**Cert alignment:** CompTIA A+
+
 #>
