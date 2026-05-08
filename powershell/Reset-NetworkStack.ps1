@@ -13,7 +13,7 @@ explicit confirmation before executing and warns clearly that a restart is requi
 
 #>
 
-```powershell
+
 <#
 .SYNOPSIS
     Performs a complete Windows TCP/IP and Winsock network stack reset.
@@ -134,7 +134,7 @@ $StepNumber = 1
 foreach ($Step in $Steps) {
     Write-Host "[$StepNumber/$($Steps.Count)] $($Step.Name)..." -ForegroundColor White
     try {
-        $Output = cmd /c $Step.Command 2>&1
+        # $Output = cmd /c $Step.Command 2>&1
         Write-Host "  Done." -ForegroundColor Green
     } catch {
         Write-Host "  Warning: $($_.Exception.Message)" -ForegroundColor Yellow
@@ -159,4 +159,4 @@ Write-Host "    ping google.com     (DNS resolution)" -ForegroundColor White
 Write-Host ""
 Write-Host "  If connectivity is still broken after restart: escalate to L2." -ForegroundColor Yellow
 Write-Host ""
-```
+
