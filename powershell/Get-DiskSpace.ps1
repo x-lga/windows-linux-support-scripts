@@ -4,4 +4,10 @@ page file exhaustion, application crashes, and I/O saturation. This script provi
 an instant, colour-coded disk space report across all local drives - the first
 thing to check when a user reports slowness.
 
+**Why this is better than the GUI:** It reports all drives simultaneously in a
+single structured view, colour-codes by severity (green/yellow/red), calculates
+used and free percentages, and flags drives below the warning threshold - something
+that requires clicking through each drive individually in Windows Explorer.
+
+
 #>
