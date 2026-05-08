@@ -9,5 +9,6 @@ single structured view, colour-codes by severity (green/yellow/red), calculates
 used and free percentages, and flags drives below the warning threshold - something
 that requires clicking through each drive individually in Windows Explorer.
 
+**Cert alignment:** CompTIA A+
 
 #>
