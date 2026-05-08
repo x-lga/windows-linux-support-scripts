@@ -8,5 +8,7 @@ effect, and the commands are irreversible without a restart. Running this on a
 server that cannot be restarted immediately would be harmful. The script requires
 explicit confirmation before executing and warns clearly that a restart is required.
 
+**Cert alignment:** CompTIA A+, CompTIA Network+
+
 
 #>
