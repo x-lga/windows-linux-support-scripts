@@ -4,5 +4,6 @@ reveals application crashes, service failures, driver issues, and security event
 that are otherwise invisible. This script queries multiple logs simultaneously
 and presents a consolidated, time-ordered view.
 
+**Cert alignment:** CompTIA A+
 
 #>
