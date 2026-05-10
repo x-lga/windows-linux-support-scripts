@@ -4,3 +4,4 @@
 # archive of any directory, logs the action, and automatically removes backups older
 # than the configured retention period.
 
+# **Cert alignment:** CompTIA A+
