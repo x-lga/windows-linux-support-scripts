@@ -3,6 +3,7 @@
 # interface status, and the top CPU-consuming processes in a single run. Essential
 # for any Linux server support session.
 
+# **Cert alignment:** CompTIA A+, CompTIA Network+
 
 
 
