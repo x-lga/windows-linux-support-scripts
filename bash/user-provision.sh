@@ -4,3 +4,5 @@
 # creating home directory, and setting correct permissions. Done manually and
 # inconsistently, accounts end up with different configurations. This script
 # standardises the process.
+
+# **Cert alignment:** CompTIA A+
