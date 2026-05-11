@@ -96,3 +96,18 @@ or applications are crashing. Run at the start of any server troubleshooting ses
 DNS flush, DHCP release/renew, cable check, restart. Use as a last resort.
 
 ---
+
+### Get-SystemInfo.ps1
+
+```powershell
+# Display on screen only
+.\powershell\Get-SystemInfo.ps1
+
+# Save report to file for ticket attachment
+.\powershell\Get-SystemInfo.ps1 -OutputFile "C:\Temp\INC-001-sysinfo.txt"
+```
+
+**When to use:** At the beginning of every support session to establish a documented
+baseline. Before making any changes. When creating an escalation package for L2.
+
+---
