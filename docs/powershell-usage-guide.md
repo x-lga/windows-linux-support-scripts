@@ -111,3 +111,24 @@ DNS flush, DHCP release/renew, cable check, restart. Use as a last resort.
 baseline. Before making any changes. When creating an escalation package for L2.
 
 ---
+
+### Test-PortConnectivity.ps1
+
+```powershell
+# Test HTTP and HTTPS to a web server
+.\powershell\Test-PortConnectivity.ps1 -Targets "webserver.company.com" -Ports 80,443
+
+# Test all common RDP and management ports to a server
+.\powershell\Test-PortConnectivity.ps1 -Targets "server01","10.20.1.4" -Ports 3389,5985,22,443
+
+# Test email server ports
+.\powershell\Test-PortConnectivity.ps1 -Targets "mail.company.com" -Ports 25,587,993
+
+# Test with shorter timeout for quick results
+.\powershell\Test-PortConnectivity.ps1 -Targets "192.168.1.1" -Ports 80,443,22 -TimeoutMs 1500
+```
+
+**When to use:** "Can't connect to application X" when basic ping works.
+Investigating firewall rules. Verifying a service is listening before connecting.
+
+---
