@@ -177,3 +177,15 @@ Get-Service | Where-Object {$_.DisplayName -like "*Windows Update*"} |
 Printing issues (Spooler). Windows Update stuck (wuauserv). IIS site not responding (W3SVC).
 
 ---
+
+## Common Error Messages
+
+| Error | Cause | Fix |
+|-------|-------|-----|
+| "cannot be loaded because running scripts is disabled" | Execution policy restricts running scripts | `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` |
+| "Access is denied" | Script requires Administrator | Right-click PowerShell → Run as Administrator |
+| "The term '.\scriptname' is not recognised" | Not in the correct directory | `cd` to the directory containing the script first |
+| "cannot be loaded because the file is not digitally signed" | Script is not signed and policy requires signatures | Either sign the script or use `Unblock-File .\scriptname.ps1` |
+
+
+---
