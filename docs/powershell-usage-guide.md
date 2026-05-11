@@ -132,3 +132,24 @@ baseline. Before making any changes. When creating an escalation package for L2.
 Investigating firewall rules. Verifying a service is listening before connecting.
 
 ---
+
+### Get-EventLogErrors.ps1
+
+```powershell
+# Last 24 hours, all logs (default)
+.\powershell\Get-EventLogErrors.ps1
+
+# Last 2 hours, System log only
+.\powershell\Get-EventLogErrors.ps1 -Hours 2 -Logs "System"
+
+# Last 48 hours, more events
+.\powershell\Get-EventLogErrors.ps1 -Hours 48 -MaxEvents 50 -Logs "System","Application"
+```
+
+**Requires:** Administrator for Security log. System and Application are accessible
+without elevation.
+
+**When to use:** Investigating the cause of a crash, unexpected reboot, service
+failure, or performance issue. Building an L2 escalation package.
+
+---
