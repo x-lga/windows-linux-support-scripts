@@ -62,3 +62,18 @@ but the IP address works. DNS record was recently updated. Mapped drive disconne
 jobs pending. Print Spooler service is running but nothing prints.
 
 ---
+
+### Get-DiskSpace.ps1
+
+```powershell
+# Standard report with default thresholds
+.\powershell\Get-DiskSpace.ps1
+
+# Stricter thresholds for servers
+.\powershell\Get-DiskSpace.ps1 -WarnThreshold 30 -CritThreshold 20
+```
+
+**When to use:** First check when a user reports the computer is slow, disk is full,
+or applications are crashing. Run at the start of any server troubleshooting session.
+
+---
