@@ -77,3 +77,22 @@ jobs pending. Print Spooler service is running but nothing prints.
 or applications are crashing. Run at the start of any server troubleshooting session.
 
 ---
+
+### Reset-NetworkStack.ps1
+
+```powershell
+# Interactive mode — prompts for confirmation
+.\powershell\Reset-NetworkStack.ps1
+
+# Non-interactive mode (automated scenarios only)
+.\powershell\Reset-NetworkStack.ps1 -SkipConfirmation
+```
+
+**Requires:** Administrator privileges.
+
+**IMPORTANT:** Requires a system restart to take effect. Warn the user before running.
+
+**When to use:** ALL other connectivity steps have been attempted and failed:
+DNS flush, DHCP release/renew, cable check, restart. Use as a last resort.
+
+---
