@@ -45,3 +45,20 @@ $PSVersionTable.PSVersion
 but the IP address works. DNS record was recently updated. Mapped drive disconnecting.
 
 ---
+
+### Clear-PrintQueue.ps1
+
+```powershell
+# Clear the default spool directory
+.\powershell\Clear-PrintQueue.ps1
+
+# Clear a custom spool directory
+.\powershell\Clear-PrintQueue.ps1 -SpoolPath "D:\CustomSpool\PRINTERS"
+```
+
+**Requires:** Administrator privileges (stopping/starting services).
+
+**When to use:** Print jobs stuck in the queue. User cannot print but queue shows
+jobs pending. Print Spooler service is running but nothing prints.
+
+---
