@@ -28,3 +28,20 @@ $PSVersionTable.PSVersion
 ```
 
 ---
+
+## Script Reference
+
+### Flush-DNS.ps1
+
+```powershell
+# Basic flush with default test (google.com)
+.\powershell\Flush-DNS.ps1
+
+# Flush and test an internal hostname
+.\powershell\Flush-DNS.ps1 -TestHostname "fileserver.contoso.local"
+```
+
+**When to use:** User reports a website or network resource is unreachable by name
+but the IP address works. DNS record was recently updated. Mapped drive disconnecting.
+
+---
