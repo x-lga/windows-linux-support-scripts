@@ -153,3 +153,27 @@ without elevation.
 failure, or performance issue. Building an L2 escalation package.
 
 ---
+
+### Restart-ServiceWithCheck.ps1
+
+```powershell
+# Restart Print Spooler
+.\powershell\Restart-ServiceWithCheck.ps1 -ServiceName "Spooler"
+
+# Restart Windows Update (may need longer timeout)
+.\powershell\Restart-ServiceWithCheck.ps1 -ServiceName "wuauserv" -TimeoutSeconds 60
+
+# Restart IIS
+.\powershell\Restart-ServiceWithCheck.ps1 -ServiceName "W3SVC"
+
+# Find the correct service name
+Get-Service | Where-Object {$_.DisplayName -like "*Windows Update*"} |
+    Select-Object Name, DisplayName
+```
+
+**Requires:** Administrator privileges.
+
+**When to use:** Application is unresponsive and a specific service is suspected.
+Printing issues (Spooler). Windows Update stuck (wuauserv). IIS site not responding (W3SVC).
+
+---
