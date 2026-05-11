@@ -18,3 +18,13 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 # Verify
 Get-ExecutionPolicy -Scope CurrentUser
 ```
+
+### Check your PowerShell version
+
+```powershell
+$PSVersionTable.PSVersion
+# These scripts require PowerShell 5.1 or later
+# PowerShell 5.1 is included in Windows 10 and Server 2016+
+```
+
+---
