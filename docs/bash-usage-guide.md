@@ -135,3 +135,22 @@ bash bash/disk-usage-report.sh /var/www
 Before a cleanup operation to identify targets. Regular capacity reporting.
 
 ---
+
+### service-monitor.sh
+
+```bash
+# Check status of multiple services
+bash bash/service-monitor.sh nginx ssh mysql cron
+
+# Check and auto-restart stopped services (requires root)
+sudo bash bash/service-monitor.sh -r nginx mysql ssh
+
+# Use as a cron watchdog (every 5 minutes)
+# Add to crontab: sudo crontab -e
+# */5 * * * * /usr/local/bin/service-monitor.sh -r nginx mysql
+```
+
+**When to use:** Checking whether a service is running after a complaint. Setting
+up a basic watchdog to restart services that crash. NOC service status checks.
+
+---
