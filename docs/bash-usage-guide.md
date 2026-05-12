@@ -154,3 +154,42 @@ sudo bash bash/service-monitor.sh -r nginx mysql ssh
 up a basic watchdog to restart services that crash. NOC service status checks.
 
 ---
+
+## Useful Linux Commands Alongside These Scripts
+
+```bash
+# Check disk space
+df -h
+
+# Find large files
+find / -type f -size +100M -not -path "/proc/*" 2>/dev/null | sort
+
+# Check service status
+systemctl status nginx
+systemctl list-units --type=service --state=running
+
+# Check running processes
+ps aux --sort=-%cpu | head -15
+ps aux --sort=-%mem | head -15
+
+# Check system log
+journalctl -p err --since "1 hour ago" --no-pager
+
+# Check open ports
+ss -tlnp
+netstat -tlnp
+
+# Check network connectivity
+ping -c 4 8.8.8.8
+traceroute google.com
+nslookup google.com
+
+# Check memory usage
+free -h
+
+# Check uptime
+uptime
+```
+
+
+---
