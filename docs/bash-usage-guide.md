@@ -72,3 +72,24 @@ bash bash/backup-with-timestamp.sh /home/user /home/user/backups 30
 patches. Creating a checkpoint before testing new software.
 
 ---
+
+### user-provision.sh
+
+```bash
+# Interactive mode
+sudo bash bash/user-provision.sh
+
+# Non-interactive mode (prompts for password only)
+sudo bash bash/user-provision.sh \
+    --username jsmith \
+    --fullname "John Smith" \
+    --groups sudo,developers \
+    --shell /bin/bash
+```
+
+**Requires:** Root/sudo.
+
+**When to use:** New employee account creation on a Linux server or workstation.
+Standardised provisioning to ensure consistent account configuration.
+
+---
