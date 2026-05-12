@@ -117,3 +117,21 @@ sudo bash bash/log-cleanup.sh -l /opt/myapp/logs -p "*.out" -d 7 -r 30
 ```
 
 ---
+
+### disk-usage-report.sh
+
+```bash
+# Analyse entire filesystem
+bash bash/disk-usage-report.sh
+
+# Analyse /var directory with top 20 entries
+bash bash/disk-usage-report.sh /var 20
+
+# Analyse web root
+bash bash/disk-usage-report.sh /var/www
+```
+
+**When to use:** Disk space is low and you need to find what is consuming the space.
+Before a cleanup operation to identify targets. Regular capacity reporting.
+
+---
