@@ -93,3 +93,27 @@ sudo bash bash/user-provision.sh \
 Standardised provisioning to ensure consistent account configuration.
 
 ---
+
+### log-cleanup.sh
+
+```bash
+# Clean /var/log — archive files older than 7 days, keep archives for 30 days
+sudo bash bash/log-cleanup.sh
+
+# Clean application log directory — archive after 3 days, keep 14 days
+sudo bash bash/log-cleanup.sh -l /var/log/nginx -d 3 -r 14
+
+# Dry run — see what WOULD be done without making changes
+bash bash/log-cleanup.sh -n
+
+# Custom pattern — only .out files
+sudo bash bash/log-cleanup.sh -l /opt/myapp/logs -p "*.out" -d 7 -r 30
+```
+
+**Cron setup (weekly cleanup, Sunday 3am):**
+```bash
+# Add to root crontab: sudo crontab -e
+0 3 * * 0 /usr/local/bin/log-cleanup.sh -l /var/log -d 7 -r 30
+```
+
+---
