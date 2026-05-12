@@ -54,3 +54,21 @@ bash bash/system-health.sh -o /tmp/health-$(hostname)-$(date +%Y%m%d).txt
 slow. Investigating high CPU or memory complaints. Building an L2 escalation package.
 
 ---
+
+### backup-with-timestamp.sh
+
+```bash
+# Backup /etc to default location (/var/backups)
+sudo bash bash/backup-with-timestamp.sh /etc
+
+# Backup web root to custom location with 14-day retention
+sudo bash bash/backup-with-timestamp.sh /var/www/html /mnt/backups 14
+
+# Backup home directory with 30-day retention
+bash bash/backup-with-timestamp.sh /home/user /home/user/backups 30
+```
+
+**When to use:** Before making any system configuration changes. Before applying
+patches. Creating a checkpoint before testing new software.
+
+---
