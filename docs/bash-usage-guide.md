@@ -34,3 +34,23 @@ sudo bash bash/service-monitor.sh -r nginx mysql
 ```
 
 ---
+
+## Script Reference
+
+### system-health.sh
+
+```bash
+# Basic health report
+bash bash/system-health.sh
+
+# Custom thresholds (warn at 80%, critical at 90%)
+bash bash/system-health.sh -w 80 -c 90
+
+# Save to file for ticket attachment
+bash bash/system-health.sh -o /tmp/health-$(hostname)-$(date +%Y%m%d).txt
+```
+
+**When to use:** Beginning of any Linux server support session. Server reported as
+slow. Investigating high CPU or memory complaints. Building an L2 escalation package.
+
+---
