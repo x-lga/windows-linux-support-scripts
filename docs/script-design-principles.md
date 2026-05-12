@@ -18,3 +18,17 @@ or check network connectivity. Single-purpose scripts are:
 - Easier to combine with other scripts in a larger workflow
 
 ---
+
+## Principle 2: Fail Loudly with a Clear Error Message
+
+When a script encounters a problem, it stops immediately and tells the technician
+exactly what went wrong in plain language. It does not:
+- Continue silently and produce incorrect results
+- Fail with a cryptic PowerShell or bash error without context
+- Exit without telling the technician what to do next
+
+Every `try/catch` block in PowerShell and every exit code check in Bash produces
+a human-readable message that diagnoses the problem and suggests the next action.
+
+---
+
