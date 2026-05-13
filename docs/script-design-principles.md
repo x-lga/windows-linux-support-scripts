@@ -99,3 +99,16 @@ no arguments and get a useful result without needing to read the documentation f
 
 ---
 
+## Principle 8: Output for Humans, Not Machines
+
+Every script produces output that a technician can read and act on immediately,
+not raw data that needs to be interpreted. Colours differentiate OK from WARNING
+from CRITICAL. Status symbols (✔, ✘, ⚠) make scanning fast. The most important
+information comes first. Next steps are included where relevant.
+
+The goal is that a technician can glance at the output and know within 3 seconds
+whether action is required and what that action is.
+
+
+---
+
