@@ -87,3 +87,15 @@ useful to include in the ticket notes.
 
 ---
 
+## Principle 7: Safe Defaults, Configurable Options
+
+Every script works correctly with no arguments. The most common use case (clear the
+standard print queue, check the standard spool directory, flush DNS and test google.com)
+requires no parameters at all. Parameters exist for the less common cases where
+customisation is needed.
+
+This follows the principle of least surprise: a technician can run any script with
+no arguments and get a useful result without needing to read the documentation first.
+
+---
+
