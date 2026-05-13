@@ -74,3 +74,16 @@ compliance ("who created this user account and when?").
 
 ---
 
+## Principle 6: Show the State Before and After
+
+Where appropriate, scripts show the state before they act and confirm the state
+after. `Clear-PrintQueue.ps1` counts jobs before clearing and confirms the spooler
+is running after restarting. `Get-DiskSpace.ps1` shows current free space.
+`Restart-ServiceWithCheck.ps1` shows the service status before stopping and
+confirms it is running after starting.
+
+This gives the technician confidence that the action actually worked and something
+useful to include in the ticket notes.
+
+---
+
