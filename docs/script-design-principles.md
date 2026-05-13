@@ -46,3 +46,16 @@ than no action at all.
 
 ---
 
+## Principle 4: Confirmation for Destructive Actions
+
+Scripts that perform irreversible actions require explicit confirmation before
+executing. `Reset-NetworkStack.ps1` requires the user to type `RESET`. This is
+not excessive caution - it prevents the script from being run accidentally, and
+it forces the technician to consciously decide this is the right action.
+
+The confirmation string is chosen to be long enough that it cannot be accidentally
+typed (`RESET`, `OFFBOARD`) rather than a single keypress (`Y`) that could be
+entered by mistake.
+
+---
+
