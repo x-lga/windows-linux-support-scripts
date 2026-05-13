@@ -32,3 +32,17 @@ a human-readable message that diagnoses the problem and suggests the next action
 
 ---
 
+## Principle 3: Validate Inputs Before Acting
+
+Every script validates its inputs before touching the system:
+- Does the directory exist before trying to read it?
+- Does the service name exist before trying to stop it?
+- Is the username already taken before trying to create it?
+- Is the confirmation exactly what we expect before an irreversible action?
+
+Validating first means the script fails before making any changes, not halfway
+through. A half-executed offboarding or a half-cleared spool directory is worse
+than no action at all.
+
+---
+
