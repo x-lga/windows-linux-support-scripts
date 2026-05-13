@@ -59,3 +59,18 @@ entered by mistake.
 
 ---
 
+## Principle 5: Log What Happened
+
+Scripts that modify system state produce an audit trail. Every `Restart-ServiceWithCheck.ps1`
+execution is logged. Every `user-provision.sh` execution is logged. Every
+`backup-with-timestamp.sh` execution is logged. The log includes:
+- Timestamp
+- What action was taken
+- What the result was
+- Who ran it (where this can be determined)
+
+This matters for both troubleshooting ("why did service X restart at 3am?") and
+compliance ("who created this user account and when?").
+
+---
+
